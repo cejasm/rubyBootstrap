@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+<!-- <div class="jumbotron">
+<h1>Products</h1>
+<p>Aplicación de ejemplo realizada con scaffold de <strong>rails</strong></p>
+</div> -->
+<%= render 'product_header' %>
+<div class="container">
+<!-- <div class="row"> -->
+<!-- <div class="col-sm-8"> -->
+  <div class="table-responsive" >
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Denominación</th>
+        <th>Precio</th>
+        <th colspan="3"><p class="text-center">Acciones<p></th>
+      </tr>
+    </thead>
+<!-- </div> -->
+<!-- <div class="col-sm-4"> -->
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.price %></td>
+          <td>
+          <div class="btn-group">
+          <td><%= link_to 'Mostrar', product , :type =>"button", :class => "btn btn-primary" %></td>
+          <td><%= link_to 'Editar', edit_product_path(product), :type =>"button", :class => "btn btn-warning" %></td>
+          <td><%= link_to 'Eliminar', product, method: :delete, data: { confirm: 'Are you sure?' } , :type =>"button", :class => "btn btn-danger" %></td>
+        </div>
+          </td>
+          
+        </tr>
+      <% end %>
+    </tbody>
+    <!-- </div> -->
+  </table>
+  <!-- </div> -->
+<br>
+<a href="/products/new" class="btn btn-info" role="button">Alta de Producto</a>
+<br> </br>
+<%= render 'product_footer' %>
+</div>
+</div>
+</div>
