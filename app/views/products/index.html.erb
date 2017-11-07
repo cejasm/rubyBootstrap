@@ -1,8 +1,5 @@
 <p id="notice"><%= notice %></p>
-<!-- <div class="jumbotron">
-<h1>Products</h1>
-<p>Aplicación de ejemplo realizada con scaffold de <strong>rails</strong></p>
-</div> -->
+
 <%= render 'product_header' %>
 <div class="container">
 <!-- <div class="row"> -->
@@ -38,7 +35,12 @@
   </table>
   <!-- </div> -->
 <br>
-<a href="/products/new" class="btn btn-info" role="button">Alta de Producto</a>
+<div class="row">
+  <div class="col-sm-10">
+    <a href="/products/new" class="btn btn-info" role="button">Alta de Producto</a>
+  </div>
+ 
+</div>
 <br> </br>
 <%= render 'product_footer' %>
 </div>
